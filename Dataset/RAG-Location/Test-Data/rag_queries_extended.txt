@@ -1,0 +1,76 @@
+# Basic Event Location Queries (Single Event → Directions)
+Get directions from Berlin Main station to the building where graduation is held
+Get directions from Berlin Main station to Student Society Hackathon
+How do I get to the Global Cultures Night event from Berlin Hauptbahnhof by public transit
+Show me walking directions from the Campus Innovators Hackathon to the Brandenburg Gate
+Get driving directions from Regensburg to the Passau graduation ceremony
+
+# Distance/Time Between Two Locations (Event + Real Location)
+How far is the Student Society Hackathon from TUM University
+How long does it take to get from TUM Robotics Expo from Moosach, Munich
+Find the distance between the TUM Entrepreneurship Bootcamp and Munich Airport
+What's the travel time between the TUM Robotics Expo and the TUM Garching Campus by public transit
+
+# Event-to-Event Queries (Two Events)
+How far is the Munich Tech Conference from the TUM Robotics Expo
+What's the distance between the Berlin Startup Fair and the Campus Innovators Hackathon
+Calculate travel time from the Hamburg Music Festival to the Berlin Startup Fair by car
+Show me directions from the Stuttgart Auto Show to the Munich Tech Summit
+
+# Complex Multi-Stop Queries
+Get directions from Frankfurt Airport to the Frankfurt Career Fair, then to my hotel at Hauptwache
+What's the fastest route from Munich Central Station to the Tech Conference and then to TUM
+Plan a route visiting the Hamburg Music Festival, then Berlin Startup Fair, then returning to Hamburg
+
+# Natural Language Variations
+Where is the Northern Sounds Festival being held this year
+How do I get to where the startup fair in Berlin is taking place
+What's the address of the automotive exhibition in Stuttgart
+Find me the venue location for the career fair in Frankfurt
+
+# Queries with Incomplete/Ambiguous References
+Get directions to the music festival in Hamburg
+Show me how to get to the tech conference
+Where is the auto show
+Take me to the career fair
+
+# Reverse Geocoding / Place Info
+What's the exact address of the Munich Tech Summit venue
+Find the coordinates for the Berlin Startup Fair location
+Show me details about the Hamburg festival venue
+Get information about the Stuttgart Messe where the auto show is held
+
+# Travel Mode Variations
+Walking directions from Berlin Alexanderplatz to the Startup Fair
+Public transit route from Hamburg Hauptbahnhof to the Northern Sounds Festival
+Biking directions from Frankfurt Römer to the Career Fair
+Driving route with traffic from Munich to the Stuttgart Auto Show
+
+# Distance Matrix Queries (Multiple Origins/Destinations)
+Calculate distances from Munich Airport, Munich HBF, and Marienplatz to the Tech Conference
+What are the travel times from Berlin Alexanderplatz to both the Startup Fair and the Hackathon
+Show me distances between TUM, BMW Welt, and the Tech Summit venue
+
+# Edge Cases & Error Scenarios
+Get directions to a nonexistent event that won't be in any PDF
+How far is the Graduation Ceremony from the Career Fair (different cities)
+What's the elevation at the Munich Tech Conference venue
+Find parking near the Hamburg Music Festival
+
+# Specific Venue Features from PDFs
+How do I get to the Main Stage at the Northern Sounds Festival
+Find directions to Hall 7.1a at the Berlin Startup Fair
+Show me the route to the Electronic Tent at Stadtpark Hamburg
+Get directions to the BMW Welt parking garage for the Tech Conference
+
+# Time-Sensitive Queries
+How long does it take to get to the Stuttgart Auto Show opening ceremony from the airport
+What's the fastest way to reach the Frankfurt Career Fair by 9 AM from the train station
+Can I walk from the U-Bahn to the Tech Conference in 15 minutes
+
+# Combined Event + Landmark Queries
+Distance from the Brandenburg Gate to the Berlin Startup Fair
+How far is the Marienplatz from the Munich Tech Conference
+Get directions from the Elbphilharmonie to the Hamburg Music Festival
+Route from Römerberg to the Frankfurt Career Fair
+

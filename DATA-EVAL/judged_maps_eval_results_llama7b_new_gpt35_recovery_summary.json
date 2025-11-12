@@ -1,0 +1,18 @@
+{
+  "count": 140,
+  "pass_rate": 0.4286,
+  "avg_scores": {
+    "tool_selection": 0.95,
+    "parameter_logic": 0.8714,
+    "result_relevance": 0.4286,
+    "format_validity": 0.75,
+    "overall": 0.7
+  },
+  "tag_counts": {
+    "ok": 61,
+    "geo_mismatch": 68,
+    "wrong_tool": 7,
+    "irrelevant_mode": 1,
+    "illogical_param": 10
+  }
+}

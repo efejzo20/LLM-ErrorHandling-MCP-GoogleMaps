@@ -1,0 +1,100 @@
+Find the distance between New York and Los Angeles by car
+What's the elevation at Mount Everest base camp?
+Get me directions from 1600 Amphitheatre Parkway to San Francisco
+How far is it from Paris to Berlin if I walk?
+What's the address for coordinates 40.7128, -74.0060?
+Search for Italian restaurants near me
+What's the travel time from Chicago to Miami by bicycle?
+Convert 10 Downing Street, London to coordinates
+Find the nearest gas station to my current location
+Get detailed info about place ID ChIJN1t_tDeuEmsRUsoyG83frY4
+What's the elevation of the Grand Canyon?
+How do I get from Tokyo Tower to Shibuya Crossing by transit?
+Calculate the driving distance from Boston to Washington D.C.
+What's the address for latitude 34.0522 and longitude -118.2437?
+Search for coffee shops in Seattle within 5km
+What's the elevation at the Dead Sea?
+Get directions from Sydney Opera House to Bondi Beach
+How far is it from Toronto to Vancouver by plane?
+Convert the address 221B Baker Street, London to latitude and longitude
+Find a pharmacy near Central Park, New York
+What's the travel time from San Francisco to Las Vegas by car?
+Get the elevation for the coordinates 27.9881, 86.9250
+How do I get from Eiffel Tower to Louvre Museum by walking?
+Calculate the distance from Madrid to Barcelona by train
+What's the address for coordinates 48.8566, 2.3522?
+Search for vegan restaurants in Portland
+What's the elevation of Mount Kilimanjaro?
+Get directions from Buckingham Palace to Tower of London
+How far is it from Moscow to Saint Petersburg by train?
+Convert the address 1600 Pennsylvania Ave NW, Washington, DC to coordinates
+Find a hotel near Disneyland Paris
+What's the travel time from Los Angeles to San Diego by bicycle?
+Get the elevation for the coordinates 36.7783, -119.4179
+How do I get from Times Square to Central Park by transit?
+Calculate the driving distance from Miami to Orlando
+What's the address for latitude 51.5074 and longitude -0.1278?
+Search for sushi restaurants in Tokyo within 10km
+What's the elevation at the top of Mount Fuji?
+Get directions from Golden Gate Bridge to Fisherman's Wharf
+How far is it from Beijing to Shanghai by plane?
+Convert the address 350 Fifth Avenue, New York to latitude and longitude
+Find a bookstore near Harvard University
+What's the travel time from Seattle to Portland by car?
+Get the elevation for the coordinates 40.6892, -74.0445
+How do I get from Colosseum to Vatican City by walking?
+Calculate the distance from Rome to Milan by train
+What's the address for coordinates 35.6895, 139.6917?
+Search for pet-friendly hotels in Los Angeles
+What's the elevation of the Andes Mountains?
+Get directions from Brandenburg Gate to Berlin Wall Memorial
+How far is it from Sydney to Melbourne by train?
+Convert the address 1 Infinite Loop, Cupertino, CA to coordinates
+Find a gym near Times Square, New York
+What's the travel time from Denver to Salt Lake City by bicycle?
+Get the elevation for the coordinates 37.7749, -122.4194
+How do I get from Notre Dame Cathedral to Sacré-Cœur by transit?
+Calculate the driving distance from Houston to Dallas
+What's the address for latitude 55.7558 and longitude 37.6173?
+Search for bakeries in Paris within 2km
+What's the elevation at the bottom of the Mariana Trench?
+Get directions from CN Tower to Niagara Falls
+How far is it from London to Edinburgh by plane?
+Convert the address 4059 Mt Lee Dr, Hollywood, CA to latitude and longitude
+Find a library near Stanford University
+What's the travel time from Austin to San Antonio by car?
+Get the elevation for the coordinates 51.1789, -1.8262
+How do I get from Big Ben to London Eye by walking?
+Calculate the distance from Lisbon to Porto by train
+What's the address for coordinates 41.9028, 12.4964?
+Search for dog parks in Chicago
+What's the elevation of the Rocky Mountains?
+Get directions from Empire State Building to Brooklyn Bridge
+How far is it from Rio de Janeiro to São Paulo by plane?
+Convert the address 1600 Amphitheatre Parkway, Mountain View, CA to coordinates
+Find a cinema near Piccadilly Circus, London
+What's the travel time from Phoenix to Tucson by bicycle?
+Get the elevation for the coordinates 48.8584, 2.2945
+How do I get from Brandenburg Gate to Checkpoint Charlie by transit?
+Calculate the driving distance from Atlanta to Savannah
+What's the address for latitude 35.6895 and longitude 139.6917?
+Search for seafood restaurants in San Francisco within 3km
+What's the elevation at the peak of Mount Everest?
+Get directions from Sydney Harbour Bridge to Bondi Beach
+How far is it from New Delhi to Mumbai by train?
+Convert the address 123 Main St, Anytown, USA to latitude and longitude
+Find a park near the Eiffel Tower
+What's the travel time from Las Vegas to Grand Canyon by car?
+Get the elevation for the coordinates 40.748817, -73.985428
+How do I get from Louvre Museum to Notre Dame Cathedral by walking?
+Calculate the distance from Amsterdam to Rotterdam by train
+What's the address for coordinates 34.0522, -118.2437?
+Search for art galleries in New York within 1km
+What's the elevation of the Himalayas?
+Get directions from Buckingham Palace to Westminster Abbey
+How far is it from Cairo to Alexandria by train?
+Convert the address 500 S Buena Vista St, Burbank, CA to coordinates
+Find a spa near the Colosseum, Rome
+What's the travel time from Orlando to Tampa by car?
+Get the elevation for the coordinates 27.1751, 78.0421
+What's the elevation at the coordinates 34.0522, -118.2437?

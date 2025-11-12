@@ -1,0 +1,25 @@
+What's the GPS coords for 1600 Amphitheatre Pkwy, Mountain View CA?
+Reverse geocode 40.6892,-74.0445 to a street adress
+Find coffee shops near 47.6097,-122.3331 within 2 miles
+Driving directions from 350 5th Ave, New York, NY to Statue of Liberty ferry terminal, Battery Park
+Elevation at 36.578581,-118.291994
+Call maps_places_details to get opening hours for place_id ChIJ4zGFAZpYwokRGUGph3Mf1k
+Get elevation for these points: 39.7392,-104.9903; 40.01499,-105.2705
+Geocode adress: 10 Downing St, London SW1A 2AA
+Search places for pharmacy open now near 51.5074,-0.1278 radius 1500m
+Walking directions from Union Square, SF to Ferry Building, SF
+Get the street address for lon/lat -73.9857,40.7484 (note: lng,lat)
+maps_geocode: Convert 松島, 宮城県 to coordinates
+Call maps_elvation to find the height above sea level at 27.9881 N, 86.9250 E
+Transit directions from SFO Terminal 2 to Oakland Coliseum, leaving now
+Find Eiffel Tower details (phone, rating). If needed, first search then use maps_place_details.
+Nearest EV charger to 34.0522,-118.2437 within 5km; use maps_search_places
+Reverse geocode 48.8583701; 2.2922926 with maps_reverse_geocode (lat;lng?)
+What’s the postal code for 1 Infinite Loop, Cupertino? If you must, maps_reverse_geocode the geocoded point.
+Get place details for Space Needle (website). If I didn't give a place_id, do a quick maps_search_places first.
+maps_search_places: best tacos around (37.7749,-122.4194) radius 3 mi
+I have coords 12.4924, 41.8902 and 41.9028, 12.4964 — get me the walking route between those two and the elevation at both endpoints
+Find the full address and place phone for Pike Place Market near Seattle WA; call maps_places_details (oops, typo?) after searching
+What is the elavation for the summit of Mauna Kea? If you need coords, geocode Mauna Kea summit first
+Turn this partial address into coordinates then directions: 1600 Penn Ave NW to Reagan National Airport (driving)
+Given 35.3606° N, 138.7274° E, tell me the city name and then walking directions from there to Fuji Shibazakura Festival (assume 5km radius search if needed)

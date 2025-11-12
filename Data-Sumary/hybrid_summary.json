@@ -1,0 +1,29 @@
+{
+  "count": 25,
+  "pass_rate": 0.52,
+  "avg_scores": {
+    "rag_trigger": 0.88,
+    "rag_resolution": 0.52,
+    "rag_usage": 0.8,
+    "final_outcome": 0.84,
+    "overall": 0.72
+  },
+  "issue_counts": {
+    "rag_not_triggered": 3,
+    "rag_wrong_location": 11,
+    "rag_not_used": 5,
+    "final_failed": 4
+  },
+  "tag_counts": {
+    "no_rag_needed": 6,
+    "correct_resolution": 10,
+    "rag_success": 10,
+    "rag_failure": 9,
+    "wrong_resolution": 8,
+    "final_failed": 3
+  },
+  "rag_needed_count": 0,
+  "non_rag_count": 25,
+  "rag_needed_pass_rate": 0.0,
+  "non_rag_pass_rate": 0.52
+}

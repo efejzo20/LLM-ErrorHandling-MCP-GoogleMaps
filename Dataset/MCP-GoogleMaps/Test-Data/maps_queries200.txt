@@ -1,0 +1,200 @@
+Eiffel Tower elevation
+How far is it from 1600 Amphitheatre Parkway to 1 Infinite Loop by car?
+Get me directions from Central Park to Times Square walking
+What's the address for coordinates 34.0522, -118.2437?
+Find the distance between New York and Los Angeles
+Search for coffee shops near 40.7128, -74.0060
+What's the elevation at Mount Everest base camp?
+Geocode 221B Baker Street, London
+How long does it take to bike from Golden Gate Park to Fisherman's Wharf?
+What's the place ID for the Louvre Museum?
+Convert 48.8588443, 2.2943506 to an address
+Find a restaurant in Paris with a view of the Eiffel Tower
+Get the coordinates for the Sydney Opera House
+What's the travel time from Miami to Orlando by transit?
+Locate the nearest hospital to 90210
+What's the elevation of the Dead Sea?
+Directions from Berlin Hauptbahnhof to Brandenburg Gate
+How far is it from Tokyo Tower to Shibuya Crossing?
+Find the address for 37.7749, -122.4194
+Search for a hotel in downtown Chicago
+What's the distance from JFK Airport to Times Square?
+Get elevation data for the Grand Canyon
+What's the place ID for the Empire State Building?
+Convert 51.5074, -0.1278 to an address
+Find a park near 10001
+How long to drive from Las Vegas to Grand Canyon Village?
+What's the elevation at the top of Mount Kilimanjaro?
+Geocode the White House
+Directions from Buckingham Palace to Big Ben walking
+What's the address for 40.6892, -74.0445?
+Find the distance between San Francisco and Seattle
+Search for a museum in Rome
+What's the travel time from Boston to New York by train?
+Locate the nearest gas station to 30301
+What's the elevation of Death Valley?
+Directions from Gare du Nord to Eiffel Tower
+How far is it from the Colosseum to Vatican City?
+Find the address for 34.0522, -118.2437
+Search for a library near 60614
+What's the distance from LAX to Disneyland?
+Get elevation data for Machu Picchu
+What's the place ID for the Statue of Liberty?
+Convert 35.6895, 139.6917 to an address
+Find a cafe near 94103
+How long to walk from Notre Dame to the Louvre?
+What's the elevation at the bottom of the Mariana Trench?
+Geocode the Taj Mahal
+Directions from Times Square to Central Park walking
+What's the address for 48.8566, 2.3522?
+Find the distance between Chicago and Detroit
+Search for a bar in downtown Los Angeles
+What's the travel time from San Diego to San Francisco by car?
+Locate the nearest pharmacy to 10019
+What's the elevation of Mount Fuji?
+Directions from Union Station to Capitol Hill
+How far is it from the Eiffel Tower to the Arc de Triomphe?
+Find the address for 51.1657, 10.4515
+Search for a gym near 30303
+What's the distance from Heathrow Airport to Oxford?
+Get elevation data for the Andes Mountains
+What's the place ID for the Colosseum?
+Convert 40.748817, -73.985428 to an address
+Find a bookstore near 20001
+How long to drive from Miami to Key West?
+What's the elevation at the summit of Mount Everest?
+Geocode the Sydney Opera House
+Directions from Hollywood Sign to Santa Monica Pier
+What's the address for 37.7749, -122.4194?
+Find the distance between Houston and Dallas
+Search for a theater in downtown San Francisco
+What's the travel time from Philadelphia to Washington D.C. by train?
+Locate the nearest supermarket to 94102
+What's the elevation of the Grand Canyon?
+Directions from Piccadilly Circus to Trafalgar Square walking
+How far is it from the Louvre to Notre Dame?
+Find the address for 55.7558, 37.6173
+Search for a spa near 90210
+What's the distance from O'Hare Airport to downtown Chicago?
+Get elevation data for the Rocky Mountains
+What's the place ID for the Sydney Opera House?
+Convert 34.052235, -118.243683 to an address
+Find a bakery near 10036
+How long to walk from the British Museum to Covent Garden?
+What's the elevation at the base of Mount Everest?
+Geocode the Empire State Building
+Directions from Shibuya Crossing to Tokyo Tower
+What's the address for 40.7128, -74.0060?
+Find the distance between Atlanta and Savannah
+Search for a nightclub in downtown Miami
+What's the travel time from Seattle to Portland by car?
+Locate the nearest ATM to 33101
+What's the elevation of Mount McKinley?
+Directions from Gare de Lyon to Notre Dame
+How far is it from the Acropolis to the Parthenon?
+Find the address for 48.2082, 16.3738
+Search for a dentist near 60611
+What's the distance from Charles de Gaulle Airport to Disneyland Paris?
+Get elevation data for the Himalayas
+What's the place ID for the Golden Gate Bridge?
+Convert 41.9028, 12.4964 to an address
+Find a florist near 30305
+How long to drive from Los Angeles to San Diego?
+What's the elevation at the top of Mount Whitney?
+Geocode the Louvre Museum
+Directions from Central Park to the Met walking
+What's the address for 34.0522, -118.2437?
+Find the distance between Denver and Boulder
+Search for a sushi restaurant in downtown Tokyo
+What's the travel time from Austin to Houston by car?
+Locate the nearest post office to 10001
+What's the elevation of the Sahara Desert?
+Directions from King's Cross to the British Museum walking
+How far is it from the Vatican to the Sistine Chapel?
+Find the address for 35.6895, 139.6917
+Search for a yoga studio near 94109
+What's the distance from Gatwick Airport to Brighton?
+Get elevation data for the Alps
+What's the place ID for the Tower of London?
+Convert 48.8566, 2.3522 to an address
+Find a pet store near 20005
+How long to walk from the Colosseum to the Trevi Fountain?
+What's the elevation at the peak of Mount Elbrus?
+Geocode the Golden Gate Bridge
+Directions from the White House to Lincoln Memorial walking
+What's the address for 51.5074, -0.1278?
+Find the distance between San Antonio and Austin
+Search for a brewery in downtown Denver
+What's the travel time from Orlando to Tampa by car?
+Locate the nearest bank to 30309
+What's the elevation of the Amazon Rainforest?
+Directions from the Eiffel Tower to the Louvre walking
+How far is it from the Kremlin to Red Square?
+Find the address for 40.4168, -3.7038
+Search for a veterinarian near 10022
+What's the distance from JFK Airport to Brooklyn?
+Get elevation data for the Appalachian Mountains
+What's the place ID for the Acropolis?
+Convert 37.7749, -122.4194 to an address
+Find a hardware store near 60657
+How long to drive from San Francisco to Los Angeles?
+What's the elevation at the top of Mount Rainier?
+Geocode the Colosseum
+Directions from the Brandenburg Gate to the Reichstag walking
+Find the distance between Phoenix and Tucson
+Search for a pizza place in downtown Chicago
+What's the travel time from Dallas to Fort Worth by car?
+Locate the nearest library to 94110
+What's the elevation of the Great Barrier Reef?
+Directions from the Sydney Opera House to Bondi Beach
+How far is it from the Pyramids of Giza to the Sphinx?
+Find the address for 52.5200, 13.4050
+Search for a hair salon near 30318
+What's the distance from LaGuardia Airport to Manhattan?
+Get elevation data for the Sierra Nevada
+What's the place ID for the Notre Dame Cathedral?
+Find a clothing store near 20009
+How long to walk from the Pantheon to Piazza Navona?
+What's the elevation at the summit of Mount Kosciuszko?
+Geocode the Tower of London
+Directions from the Hollywood Walk of Fame to Griffith Observatory
+Find the distance between Portland and Salem
+Search for a seafood restaurant in downtown Boston
+What's the travel time from Minneapolis to St. Paul by car?
+Locate the nearest gym to 10018
+What's the elevation of the Atacama Desert?
+Directions from the Louvre to the Musée d'Orsay walking
+How far is it from the Forbidden City to Tiananmen Square?
+Find the address for 41.8781, -87.6298
+Search for a car rental near 60606
+What's the distance from Newark Airport to Hoboken?
+Get elevation data for the Pyrenees
+What's the place ID for the Brandenburg Gate?
+Find a toy store near 30306
+How long to drive from New York to Boston?
+What's the elevation at the top of Mount St. Helens?
+Geocode the Sydney Harbour Bridge
+Directions from the Vatican to St. Peter's Basilica walking
+Find the distance between Miami and Fort Lauderdale
+Search for a bakery in downtown Seattle
+What's the travel time from Detroit to Ann Arbor by car?
+Locate the nearest cinema to 94115
+What's the elevation of the Mojave Desert?
+Find the distance and time from 123 Main St, Springfield to 456 Elm St, Shelbyville by bike
+What's the elevation at the top of Mount Everest?
+Get me directions from 1600 Amphitheatre Parkway, Mountain View to 1 Infinite Loop, Cupertino by car
+How high is the Empire State Building above sea level?
+Search for coffee shops near 40.7128, -74.0060 within 2 miles
+Find the travel time from Paris to Berlin using public transit
+What's the latitude and longitude of the Eiffel Tower?
+Get detailed info about place with ID ChIJN1t_tDeuEmsRUsoyG83frY4
+How far is it from New York to Los Angeles by plane?
+Locate the nearest hospital to 51.5074, -0.1278
+Convert 1600 Pennsylvania Ave NW, Washington, DC to coordinates
+Find the best route from my current location to Central Park by walking
+What's the distance between Tokyo and Kyoto by train?
+Get the address for the location at 48.8584, 2.2945
+Search for Italian restaurants in Rome, Italy
+How high is the Burj Khalifa above sea level?
+Find the elevation at 34.0522, -118.2437
+What's the distance and time from 1600 Amphitheatre Parkway, Mountain View, CA to 1 Infinite Loop, Cupertino, CA by bicycle?

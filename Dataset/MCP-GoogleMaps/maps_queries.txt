@@ -1,0 +1,140 @@
+How do I get to Times Square from Central Park walking?
+Driving directions from 1600 Amphitheatre Pkwy, Mountain View CA to San Jose Diridon Station
+Do a full‑text search for “tacos” around Mission District.
+Try a keyword‑only search for “ramen open now” near Shibuya.
+Run a freeform phrase search for “vegan bakery” around Back Bay.
+Walking directions from Notre Dame to Eiffel Tower.
+Directions from the Statue of Liberty to Ellis Island by ferry.
+Compute distance from JFK Airport to LaGuardia Airport in New York.
+Search by words for “late‑night pizza” in Wicker Park.
+Use a simple text lookup for “third‑wave coffee” near South Congress.
+Do a literal phrase search “rooftop bar” around Midtown.
+Try a text‑only query “dog‑friendly patio” near Wynwood.
+Run a terms search “vintage thrift” in The Gulch.
+Find ramen near Shinjuku with radius=60000
+Search coffee near Times Square radius=100000
+Find museums near Louvre with radius=ten thousand
+Search libraries near Berlin radius=driving
+Find theaters near London radius=walking
+Search galleries near Paris mode=transit
+Find parks near Rome mode=bicycling
+Search brunch near Madrid mode=flying
+How far is it from Seattle to Portland, by driving?
+Calculate the distance between multiple starting points and the Grand Canyon.
+Calculate the distance between these starting points: Los Angeles, CA, and Chicago, IL  and the Grand Canyon.
+Find dog parks near Zurich with ridiculous radius 9999999
+Search night markets near Taipei around 100000 meters
+Find halal food near Riyadh with radius 70000 meters
+Search shawarma near Beirut radius -500
+Find sushi near Kyoto radius 0
+How far is it from Boston to New York by train?
+How far is it from Boston to New York by train?
+Get me the distance between multiple points: Chicago, New York, and Miami.
+Search vegan near Singapore radius 1e6
+Find coffee near Buenos Aires within 60001 meters
+Search bakeries near Cape Town within 51000 meters
+Find gelato near Rome within 52000 meters
+Search ramen near Sapporo within 53000 meters
+Find curry near London within 54000 meters
+Search kebab near Istanbul within 55000 meters
+Find tacos near San Diego within 56000 meters
+Search pho near Hanoi within 57000 meters
+Find shawarma near Tel Aviv within 58000 meters
+Distance matrix with mode=car from Seattle to Bellevue and Redmond
+Distance matrix with mode=bus from Waterloo to Greenwich and Canary Wharf
+Distance matrix with units=imperial from Austin to Round Rock and San Marcos
+Distance matrix with departure_time=now from Cupertino to San Jose and Santa Clara
+Distance matrix from origin=San Francisco to destination=Oakland
+What's the place ID for the Louvre Museum?
+What's the distance from JFK Airport to Times Square?
+What's the place ID for the Empire State Building?
+Elevation along the trail from 37.7338,-119.5720 to 37.7150,-119.5840
+Elevation at Mount Rainier Visitor Center
+Elevation for path: 37.8199,-122.4783; 37.8076,-122.4750; 37.8024,-122.4481
+Elevation for coordinates "48.8584,2.2945" and "51.5007,-0.1246"
+Elevation of Yosemite Valley and Glacier Point
+Find nearby sushi using text query "sushi" around 35.6895,139.6917 radius 1200
+Search for "bookstore" near 40.730610,-73.935242 radius 900
+Find "live music" near 34.0522,-118.2437 radius 1500
+Search places for "dog friendly cafe" near 51.5074,-0.1278 within 1000 meters
+Find directions from Stanford to Googleplex in Mountain View by bicycle
+Get route from Buckingham Palace to British Museum by transit
+Driving directions from Union Station Toronto to Pearson Airport
+Walking route from Trevi Fountain to Spanish Steps
+Bike route from Shibuya Crossing to Yoyogi Park
+Compute distance between San Jose and Santa Cruz
+Travel time from Oakland to Berkeley by walking
+Public transit time from SFO to Palo Alto
+Biking time from Kyoto Station to Fushimi Inari
+What's the place ID for the Colosseum?
+Show me info for Louvre Museum
+Show me info for Eiffel Tower
+Search for ramen spots near Asakusa within 1000 meters
+Find vegetarian breakfast near Covent Garden within 900 meters
+Search late night food near Miami Beach within 1500 meters
+Find dog-friendly patios near Vancouver within 1200 meters
+Search free museums near Washington DC within 2000 meters
+Find third-wave coffee near Melbourne within 1000 meters
+Search Michelin star restaurants near Paris within 2000 meters
+EV charging station near me, radius 2 mi
+Geocode this: 〒100-0005 東京都千代田区丸の内１丁目９−１
+Scenic walking route from Uffizi Gallery to Piazzale Michelangelo
+Find artisan bakeries near Lisbon within 1200 meters
+Search craft beer bars near Brussels within 1300 meters
+Find halal steakhouse near Dubai within 2000 meters
+Search karaoke boxes near Seoul within 1100 meters
+Find rooftop lounges near Kuala Lumpur within 1500 meters
+Search coworking with meeting rooms near Singapore within 1800 meters
+Find bookstores open now near New York within 1000 meters
+Search pharmacies open 24 hours near Chicago within 1200 meters
+Find hospitals with ER near Los Angeles within 2000 meters
+Search playgrounds with shade near Phoenix within 1500 meters
+Find EV fast chargers (CCS) near Amsterdam within 3000 meters
+Search public restrooms near San Francisco within 900 meters 
+What’s the phone number and opening hours for La Taqueria on Mission Street?
+Are the Guggenheim Museum’s hours different on Fridays, and what’s their contact?
+Give me the address and star rating for Joe’s Pizza on Carmine Street.
+Pull the reviews and website for the British Museum in London.
+Is Tartine Bakery (Guerrero St) open right now, and do they have a phone number?
+Show the contact card and hours for Blue Bottle Coffee in Hayes Valley.
+Do they take reservations at The French Laundry, and what’s the exact address?
+Get me the street address and Google rating for Katz’s Delicatessen.
+What’s the official phone number for Hotel del Coronado and their check‑in times?
+Do the Louvre’s visitor reviews mention long lines lately?
+How long does it take to get from Times Square to JFK by subway?
+Compare ETA from Oakland to Berkeley and to Emeryville, walking.
+Driving time from Palo Alto to Mountain View and Sunnyvale, please.
+What’s the commute time from Brooklyn Heights to Midtown and to FiDi by subway?
+Give me the travel time from Seattle to Bellevue and Redmond by bus.
+Walking time from Ueno Zoo to Tokyo Skytree and to Asakusa?
+Bike ETA from Cambridge to Harvard Stadium and Kendall Square.
+How far (time) is Marina Bay Sands to Jewel Changi and to Gardens by the Bay?
+What’s the fastest time from Shoreditch to Westminster and South Bank by transit?
+Provide a small ETA grid from Waterloo to Covent Garden and Soho via bus.
+Turn‑by‑turn from Golden Gate Park to Twin Peaks by bicycle.
+Navigation from LAX to Disneyland, avoid the slowest route.
+Walk me from Union Square SF to the Ferry Building.
+Transit route from Shibuya Station to the Ghibli Museum.
+Drive from Notre‑Dame to Sacré‑Cœur with the quickest route.
+Cycle directions from Pike Place Market to the Space Needle.
+Route me from Buckingham Palace to the British Museum by bus.
+Walking route from Trevi Fountain to the Spanish Steps.
+Best route from Tokyo Station to Akihabara with minimal transfers.
+Navigate from Zurich HB to ETH main building by tram.
+How high above sea level is Denver Union Station?
+Reverse geocode: lat=51.5007 long=-0.1246
+What’s the elevation at 37.7749,-122.4194 and at 34.0522,-118.2437?
+Altitude for Machu Picchu citadel and for Cusco’s Plaza de Armas?
+Elevation at the South Rim’s Mather Point versus Yavapai Point?
+Give me the elevation profile from Mist Trail trailhead to Nevada Fall.
+What’s the elevation at the summit of Mount Tamalpais and at Stinson Beach?
+How much elevation gain from Aspen town center to Maroon Lake?
+Altitude at Grand Canyon Village and at Desert View Watchtower.
+What’s the height above sea level for Lake Louise and Moraine Lake?
+Elevation for these spots: Griffith Observatory, Runyon Canyon Overlook.
+I need the exact coordinates and elevation at the main entrance of Machu Picchu
+Details for Museo Nacional del Prado (include place_id)
+Bike route from Times Sq to Brooklyn Bridge Park
+Bicycling route from LAX to Santa Monica Pier
+Search coffee shops in Austin TX
+Where is the nearest IKEA to SW1A 2AA?

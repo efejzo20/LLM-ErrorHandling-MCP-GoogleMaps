@@ -1,0 +1,20 @@
+Find the distance and time from 123 Main St, Springfield to 456 Elm St, Shelbyville by car
+What's the elevation at Mount Everest base camp?
+Get me directions from Central Park, NY to Times Square, NY walking
+How high is the Eiffel Tower above sea level?
+What's the address for coordinates 37.7749, -122.4194?
+Search for coffee shops near 1600 Amphitheatre Parkway, Mountain View
+Convert 10 Downing Street, London to latitude and longitude
+What's the travel time between Los Angeles and San Francisco by train?
+Find the place details for ChIJN1t_tDeuEmsRUsoyG83frY4
+How far is it from Berlin to Munich by bike?
+Get the coordinates for the Statue of Liberty
+What's the elevation at 34.0522, -118.2437?
+Show me directions from my current location to the nearest gas station
+Find the nearest hospital to 90210
+What's the address of the White House?
+Calculate the driving distance from Miami to Orlando
+Get detailed info about place ID ChIJD7fiBh9u5kcRYJSMaMOCCwQ
+How long does it take to walk from the Louvre to the Eiffel Tower?
+What's the elevation of the Grand Canyon rim?
+Find a pizza place near 48.8566, 2.3522 within 2 km radius

@@ -1,0 +1,32 @@
+query,event_name,expected_rag_location,needs_rag
+Get directions from Berlin Hauptbahnhof to Brandenburg Gate,,,no
+How far is it from Munich Airport to Marienplatz,,,no
+Convert 41.9028 12.4964 to an address,,,no
+What's the travel time from Frankfurt Römer to Frankfurt Airport by public transit,,,no
+Show me the route from Stuttgart Hauptbahnhof to Mercedes-Benz Museum,,,no
+Get directions from TUM Main Campus to Munich Central Station,,,no
+What's the distance between Alexanderplatz and Potsdamer Platz in Berlin,,,no
+Get directions from Berlin Main station to the building where graduation is held,graduation,Innstraße 31 94032 Passau,yes
+Get directions from Berlin Main station to Student Society Hackathon,Student Society Hackathon,"Innovation Hub, Building C, Room 101, University of Berlin",yes
+How far is the Student Society Hackathon from TUM University,Student Society Hackathon,"Innovation Hub, Building C, Room 101, University of Berlin",yes
+How long does it take to get from TUM Robotics Expo from Moosach Munich,TUM Robotics Expo,"TUM Main Campus, Mechanical Engineering Building, Room 123",yes
+Find the distance between the TUM Entrepreneurship Bootcamp and Munich Airport,TUM Entrepreneurship Bootcamp,"TUM Garching Campus, Innovation Center Auditorium",yes
+Get driving directions from Regensburg to the Passau graduation ceremony,Passau graduation ceremony,Innstraße 31 94032 Passau,yes
+How do I get to the Global Cultures Night event from Berlin Hauptbahnhof by public transit,Global Cultures Night,"Grand Auditorium, Arts & Culture Center, University of Berlin",yes
+What's the travel time between the TUM Robotics Expo and the TUM Garching Campus by public transit,TUM Robotics Expo,"TUM Main Campus, Mechanical Engineering Building, Room 123",yes
+Show me walking directions from the Campus Innovators Hackathon to the Brandenburg Gate,Campus Innovators Hackathon,"Innovation Hub, Building C, Room 101, University of Berlin",yes
+How far is the Munich Tech Conference from the TUM Robotics Expo,Munich Tech Conference|TUM Robotics Expo,"BMW Welt, Am Olympiapark 1, 80809 Munich|TUM Main Campus, Mechanical Engineering Building, Room 123",yes
+What's the distance between the Berlin Startup Fair and the Campus Innovators Hackathon,Berlin Startup Fair|Campus Innovators Hackathon,"Messe Berlin, Messedamm 22, 14055 Berlin, Hall 7.1a|Innovation Hub, Building C, Room 101, University of Berlin",yes
+Get directions from Frankfurt Airport to the Frankfurt Career Fair,Frankfurt Career Fair,"Frankfurt Messe, Ludwig-Erhard-Anlage 1, 60327 Frankfurt, Hall 3.0",yes
+Show me the route from Hamburg Hauptbahnhof to the Northern Sounds Festival,Northern Sounds Festival,"Stadtpark Hamburg, Saarlandstraße, 22303 Hamburg",yes
+Where is the Northern Sounds Festival being held this year,Northern Sounds Festival,"Stadtpark Hamburg, Saarlandstraße, 22303 Hamburg",yes
+Calculate distances from Munich Airport to the Tech Conference,Tech Conference,"BMW Welt, Am Olympiapark 1, 80809 Munich",yes
+Walking directions from Berlin Alexanderplatz to the Startup Fair,Startup Fair,"Messe Berlin, Messedamm 22, 14055 Berlin, Hall 7.1a",yes
+How do I get to Hall 7.1a at the Berlin Startup Fair,Berlin Startup Fair,"Messe Berlin, Messedamm 22, 14055 Berlin, Hall 7.1a",yes
+Distance from the Brandenburg Gate to the Berlin Startup Fair,Berlin Startup Fair,"Messe Berlin, Messedamm 22, 14055 Berlin, Hall 7.1a",yes
+What's the venue address for the TUM Entrepreneurship Bootcamp,TUM Entrepreneurship Bootcamp,"TUM Garching Campus, Innovation Center Auditorium",yes
+How do I get from the Passau graduation ceremony to the train station,Passau graduation ceremony,Innstraße 31 94032 Passau,yes
+Find the route from the TUM Robotics Expo to Munich Tech Conference by bike,TUM Robotics Expo|Munich Tech Conference,"TUM Main Campus, Mechanical Engineering Building, Room 123|BMW Welt, Am Olympiapark 1, 80809 Munich",yes
+What's the distance from the Berlin Startup Fair to Berlin Brandenburg Airport,Berlin Startup Fair,"Messe Berlin, Messedamm 22, 14055 Berlin, Hall 7.1a",yes
+How long to walk from the Frankfurt Career Fair to the Frankfurt city center,Frankfurt Career Fair,"Frankfurt Messe, Ludwig-Erhard-Anlage 1, 60327 Frankfurt, Hall 3.0",yes
+

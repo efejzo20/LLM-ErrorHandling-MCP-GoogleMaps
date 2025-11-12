@@ -1,0 +1,20 @@
+{
+  "count": 140,
+  "pass_rate": 0.5286,
+  "pass_rate_note": "Calculated ignoring result_relevance (only tool_selection, parameter_logic, format_validity)",
+  "avg_scores": {
+    "tool_selection": 0.9357,
+    "parameter_logic": 0.6357,
+    "result_relevance": 0.3214,
+    "format_validity": 0.7571,
+    "overall": 0.4879
+  },
+  "tag_counts": {
+    "ok": 47,
+    "geo_mismatch": 74,
+    "illogical_param": 30,
+    "wrong_tool": 19,
+    "over_broad_radius": 2,
+    "irrelevant_mode": 2
+  }
+}

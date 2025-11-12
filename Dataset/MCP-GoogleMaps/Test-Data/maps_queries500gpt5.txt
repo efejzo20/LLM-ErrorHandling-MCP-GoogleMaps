@@ -1,0 +1,50 @@
+Fastest way from 221B Baker St, London to Heathrow Terminal 5 by public transit
+Drive from 1600 Pennsylvania Ave NW to 1 Infinite Loop, Cupertino
+Bike route from Times Sq to Brooklyn Bridge Park
+Walking directions 48.85837,2.294481 to 2.333,48.860 (is that lat,lng?)
+Shortest path from Eiffel Tower to Louvre in km
+How do I get from Union Square SF to SFO tmrw morning? prefer transit
+Route from Starbucks near Pike Place to Space Needle by bike
+Directions from 34.0522 -118.2437 to 36.1699 -115.1398 driving
+Walking from 京都駅 to 伏見稲荷大社
+Get me from E45 9rY (Plus Code) to CB2 1TN by car
+Drive from 10 Downing St, London SW1A 2AA to Buckingham Palace Road, London
+How far is it and fastest route from SF Ferry Building to Golden Gate Park by bike
+Walking from 55.7558N 37.6173E to 55.7520N 37.6175E
+Transit from JFK Terminal 4 to 34 St Penn Station
+How to get from CN Tower, Toronto to Niagara Falls, ON by bus
+Scenic walking route from Uffizi Gallery to Piazzale Michelangelo
+Geocode: 350 Fifth Ave, NYC 10118
+What are the coordinates for Museo del Prado, Madrid?
+Lat/Lon for ул. Арбат 12, Москва
+Convert this address to GPS: 1 Hacker Way, Menlo Park, CA
+Where is The Shard London located? (coords pls)
+Coordinates for postcode SW1A 1AA
+Geocode this: 〒100-0005 東京都千代田区丸の内１丁目９−１
+GPS for Äußere Nürnberger Str. 62, 91301 Forchheim, DE
+Location of Université de Montréal, Pavillon Roger-Gaudry latlng?
+Whats the address at 40.6892,-74.0445?
+Reverse geocode: lat=51.5007 long=-0.1246
+Address for 48.2082N, 16.3738E
+Find the nearest street address to 34.0113 -118.4920 (Santa Monica)
+What city am I in at -33.8568,151.2153?
+Whats the address and elevation at 40.7484,-73.9857?
+What place is at 37.422,-122.084? Provide name
+Find coffee shops near 47.6097,-122.3331 within 2 miles
+restaurants open now near me
+Search: ATM around 1600 Amphitheatre Pkwy, 2000m radius
+Best sushi in Shibuya
+EV charging station near 37.789,-122.401 (500 m)
+parks with playgrounds around 41.8781,-87.6298
+Pharmacy near CB3 0FA
+hotel close to Gare du Nord within 1km
+Where is the nearest IKEA to SW1A 2AA?
+Public toilets by Central Park NY
+Pet-friendly cafes around me, SF downtown
+Dog parks within 3,000 meters of -37.8136,144.9631
+Details for place_id: ChIJN1t_tDeuEmsRUsoyG83frY4
+Get phone and hours for place id ChIJIQBpAG2ahYAR_6128GcTUEo
+Details for Museo Nacional del Prado (include place_id)
+Place details for place_id=ChIJW-T2Wt7hkkQRVPm6kKIQw0w
+Elevation at 39.7392,-104.9903
+Get elevations for these points: 27.9881,86.9250; 36.5785,-118.2919

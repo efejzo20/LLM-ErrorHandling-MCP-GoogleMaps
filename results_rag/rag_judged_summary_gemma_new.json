@@ -1,0 +1,15 @@
+{
+  "count": 30,
+  "pass_rate": 0.6333,
+  "rag_needed_count": 23,
+  "non_rag_count": 7,
+  "rag_needed_pass_rate": 0.5217,
+  "non_rag_pass_rate": 1.0,
+  "issue_counts": {
+    "rag_not_triggered": 5,
+    "rag_wrong_address": 3,
+    "api_failed": 6
+  },
+  "avg_address_confidence": 0.6848,
+  "avg_api_confidence": 0.8133
+}
