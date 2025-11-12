@@ -11,7 +11,7 @@ try:
 except ImportError:
     pass
 
-from rag_location_resolver import RAGLocationResolver
+from .rag_location_resolver import RAGLocationResolver
 
 
 def _collect_files(files: List[str], directory: str | None) -> List[str]:

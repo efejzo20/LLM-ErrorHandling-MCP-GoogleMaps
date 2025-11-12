@@ -1,8 +1,7 @@
 """
-Google Maps MCP RAG Evaluator: Batch queries → LLM Tool Call → MCP Result
-On failure: RAG resolves event location → LLM regenerates tool call with context → MCP Result
-- No final assistant LLM response generation
-- Saves per-query results with: query, tool_call, tool_response, success, error, retry fields
+Google Maps MCP Evaluator: Batch queries → LLM Tool Call → MCP Result → JSONL log
+- Skips final assistant response generation
+- Saves per-query results with: query, tool_call, tool_response, success, error
 """
 
 import os
@@ -16,6 +15,9 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
+from src.utils.error_recovery import ToolCallRecovery
+from langchain_community.llms import Ollama
+from langchain_community.chat_models import ChatOllama
 
 # Load environment variables
 try:
@@ -24,31 +26,34 @@ try:
 except ImportError:
     pass
 
-from rag_location_resolver import RAGLocationResolver
 
+class GoogleMapsEvaluator:
+    """Evaluator that connects to Google Maps MCP and runs batch queries."""
 
-class GoogleMapsRAGEvaluator:
-    """Evaluator that connects to Google Maps MCP, with RAG fallback for event locations."""
-
-    def __init__(self, rag_files: Optional[List[str]] = None, rag_dir: Optional[str] = None) -> None:
+    def __init__(self) -> None:
         self.llm: Optional[ChatOpenAI] = None
         self.mcp_client = None
         self.available_tools: Dict[str, Dict[str, Any]] = {}
         self._stdio_context = None
         self._session_context = None
-        self._rag = RAGLocationResolver()
-        self._rag_files = rag_files or []
-        self._rag_dir = rag_dir
+        self.recovery: Optional[ToolCallRecovery] = None
 
     async def setup(self) -> None:
-        """Setup LLM and MCP connection (Google Maps), and build RAG index."""
+        """Setup LLM and MCP connection (Google Maps)."""
         # Initialize LLM
-        self.llm = ChatOpenAI(
-            base_url=os.getenv("OPENAI_API_BASE", "https://llms-inference.innkube.fim.uni-passau.de"),
-            api_key=os.getenv("UNIVERSITY_LLM_API_KEY"),
-            model=os.getenv("MAPS_LLM_MODEL", "llama3.1"),
+        # self.llm = ChatOpenAI(
+        #     base_url="https://llms-inference.innkube.fim.uni-passau.de",
+        #     api_key=os.getenv("UNIVERSITY_LLM_API_KEY"),
+        #     model="gemma2",
+        #     temperature=0.0,
+        # )
+        self.llm = ChatOllama(
+            base_url="http://localhost:11434",  # Default Ollama endpoint
+            model="phi4:14b",                   
             temperature=0.0,
         )
+        # Initialize recovery helper using the same LLM
+        self.recovery = ToolCallRecovery(self.llm)
 
         # Setup MCP connection for Google Maps
         server_params = StdioServerParameters(
@@ -76,20 +81,6 @@ class GoogleMapsRAGEvaluator:
                 "schema": tool.inputSchema if hasattr(tool, "inputSchema") else {},
             }
 
-        # Build RAG index (if files/dir provided)
-        files: List[str] = []
-        files.extend(self._rag_files)
-        if self._rag_dir and os.path.isdir(self._rag_dir):
-            for name in os.listdir(self._rag_dir):
-                path = os.path.join(self._rag_dir, name)
-                if os.path.isfile(path) and os.path.splitext(path)[1].lower() in {".pdf", ".txt", ".md", ".markdown"}:
-                    files.append(path)
-        if files:
-            added = await self._rag.add_files(files)
-            print(f"📚 RAG indexed {len(files)} files into {added} chunks")
-        else:
-            print("📚 RAG: no files provided for indexing (fallback still available, but will find nothing)")
-
         print(f"✅ Evaluator setup complete with {len(self.available_tools)} tools (Google Maps)")
 
     def _tools_description(self) -> str:
@@ -98,37 +89,24 @@ class GoogleMapsRAGEvaluator:
             tools_desc += f"- {name}: {info['description']}\n"
         return tools_desc
 
-    async def generate_tool_call(self, user_input: str, extra_context: Optional[str] = None) -> Dict[str, Any]:
+    async def generate_tool_call(self, user_input: str) -> Dict[str, Any]:
         """Use the LLM to produce a tool call JSON for a given query."""
         system_prompt = f"""You are a Google Maps assistant using MCP tools. 
 
-{self._tools_description()}
+        {self._tools_description()}
 
-The user will ask you to do something. You need to decide which tool to call and what parameters to use.
+        The user will ask you to do something. You need to decide which tool to call and what parameters to use.
 
-DO NOT PROVIDE DIRECTIONS TO A PLACE THE USER DID NOT EXPLICITLY ASK FOR. LEAVE THE PARAMETRS AS NULL IF NOT SPECIFIED.
+        IMPORTANT: Respond with ONLY a valid JSON object. Do not wrap it in markdown code blocks or add any other text.
 
-IMPORTANT: Respond with ONLY a valid JSON object. Do not wrap it in markdown code blocks or add any other text.
+        Respond with a JSON object containing:
+        - "tool_name": the name of the tool to call
+        - "parameters": object with the parameters for the tool
+        - "reasoning": brief explanation of why you chose this tool
 
-Respond with a JSON object containing:
-- "tool_name": the name of the tool to call
-- "parameters": object with the parameters for the tool
-- "reasoning": brief explanation of why you chose this tool
+        If no tool is needed, set "tool_name" to null.
 
-If no tool is needed, set "tool_name" to null.
-
-Examples:
-- If user asks "geocode 1600 Amphitheatre Pkwy, Mountain View" → {{"tool_name": "geocode", "parameters": {{"address": "1600 Amphitheatre Pkwy, Mountain View"}}, "reasoning": "User wants coordinates for an address"}}
-- If user asks "directions from Berlin to Munich" → {{"tool_name": "directions", "parameters": {{"origin": "Berlin", "destination": "Munich"}}, "reasoning": "User wants a route"}}
-- If user asks "find coffee near Times Square" → {{"tool_name": "places_search", "parameters": {{"query": "coffee", "location": "Times Square, New York"}}, "reasoning": "User wants nearby places"}}
-"""
-
-        if extra_context:
-            system_prompt += (
-                "\n\nAdditional context you MUST use when building parameters (override ambiguous or unknown locations with the resolved one):\n"
-                f"{extra_context}\n"
-                "Specifically: if the user's destination refers to an event name, REPLACE it with the 'resolved_location' string provided above when setting 'destination' or 'address' parameters.\n"
-            )
+        Remember: Return ONLY the JSON object, nothing else."""
 
         messages = [
             SystemMessage(content=system_prompt),
@@ -243,8 +221,8 @@ def read_queries(args: argparse.Namespace) -> List[str]:
             return queries
     if args.query:
         return args.query
-    # Default: load from maps_queries file if present
-    default_file = os.path.join(os.path.dirname(__file__), "Dataset/RAG-Location/rag_queries.txt")
+    # Default: load from maps_test_queries file if present
+    default_file = os.path.join(os.path.dirname(__file__), "Dataset/MCP-GoogleMaps/maps_queries.txt")
     if os.path.exists(default_file):
         with open(default_file, "r", encoding="utf-8") as f:
             return [line.strip() for line in f if line.strip()]
@@ -267,8 +245,8 @@ async def run_evaluation(args: argparse.Namespace) -> int:
     missing = []
     if not os.getenv("GOOGLE_MAPS_API_KEY"):
         missing.append("GOOGLE_MAPS_API_KEY")
-    if not os.getenv("UNIVERSITY_LLM_API_KEY"):
-        missing.append("UNIVERSITY_LLM_API_KEY")
+    # if not os.getenv("UNIVERSITY_LLM_API_KEY"):
+    #     missing.append("UNIVERSITY_LLM_API_KEY")
 
     if missing:
         print("❌ Missing required environment variables:")
@@ -276,11 +254,8 @@ async def run_evaluation(args: argparse.Namespace) -> int:
             print(f"   - {var}")
         return 2
 
-    rag_files = args.rag_file or []
-    rag_dir = args.rag_dir
-
     queries = read_queries(args)
-    evaluator = GoogleMapsRAGEvaluator(rag_files=rag_files, rag_dir=rag_dir)
+    evaluator = GoogleMapsEvaluator()
 
     try:
         await evaluator.setup()
@@ -293,7 +268,6 @@ async def run_evaluation(args: argparse.Namespace) -> int:
             print("=" * 60)
             print(f"▶️  [{idx}/{total}] Query: {q}")
 
-            # Initial tool call and execution
             tool_call = await evaluator.generate_tool_call(q)
             success, tool_response, error = await evaluator.execute_tool(tool_call)
 
@@ -305,49 +279,34 @@ async def run_evaluation(args: argparse.Namespace) -> int:
                     success = False
                     error = detected_error
 
-            # RAG fallback if failed
-            rag_used = False
-            retry_tool_call: Optional[Dict[str, Any]] = None
-            retry_success: Optional[bool] = None
-            retry_tool_response: Optional[str] = None
-            retry_error: Optional[str] = None
-            rag_extra_context: Optional[str] = None
-            rag_resolved_location: Optional[str] = None
+            # Attempt recovery if initial attempt failed
+            recovery_attempted = False
+            recovery_tool_call: Optional[Dict[str, Any]] = None
+            recovery_success: Optional[bool] = None
+            recovery_tool_response: Optional[str] = None
+            recovery_error: Optional[str] = None
 
             if not success:
-                rag_used = True
-                print("🛟 Attempting RAG fallback to resolve event location...")
-                rag_result = await evaluator._rag.resolve_location(q)
-                rag_resolved_location = rag_result.get("address") or rag_result.get("location")
-                rag_resolved_location = (rag_resolved_location or "").strip() or None
+                recovery_attempted = True
+                print("🔁 Attempting recovery with error-aware LLM refinement...")
+                recovery_tool_call = await evaluator.recovery.generate_recovery_tool_call(
+                    user_input=q,
+                    error_message=error or "Unknown error",
+                    previous_tool_call=tool_call,
+                    available_tools=evaluator.available_tools,
+                    last_response_text=tool_response or None,
+                )
+                recovery_success, recovery_tool_response, recovery_error = await evaluator.execute_tool(recovery_tool_call)
 
-                if rag_resolved_location:
-                    rag_extra_context = (
-                        "Event location resolved from local documents: "
-                        + json.dumps(
-                            {
-                                "resolved_location": rag_resolved_location,
-                                "confidence": rag_result.get("confidence"),
-                                "reasoning": rag_result.get("reasoning"),
-                            },
-                            ensure_ascii=False,
-                        )
-                    )
-                    # Regenerate tool call with extra context
-                    retry_tool_call = await evaluator.generate_tool_call(q, extra_context=rag_extra_context)
-                    retry_success, retry_tool_response, retry_error = await evaluator.execute_tool(retry_tool_call)
+                # Heuristic error detection on recovery response
+                if recovery_success and not recovery_error:
+                    rec_detected_error = _detect_error_from_response_text(recovery_tool_response)
+                    if rec_detected_error:
+                        print(f"⚠️  Heuristic error detected after recovery: {rec_detected_error}")
+                        recovery_success = False
+                        recovery_error = rec_detected_error
 
-                    # Heuristic check on retry
-                    if retry_success and not retry_error:
-                        rec_detected_error = _detect_error_from_response_text(retry_tool_response)
-                        if rec_detected_error:
-                            print(f"⚠️  Heuristic error detected after RAG retry: {rec_detected_error}")
-                            retry_success = False
-                            retry_error = rec_detected_error
-                else:
-                    print("ℹ️ RAG could not resolve a usable location; skipping retry")
-
-            final_success = success or bool(retry_success)
+            final_success = success or bool(recovery_success)
 
             record: Dict[str, Any] = {
                 "query": q,
@@ -356,13 +315,11 @@ async def run_evaluation(args: argparse.Namespace) -> int:
                 "success": success,
                 "error": error,
                 "detected_error": detected_error,
-                "rag_used": rag_used,
-                "rag_resolved_location": rag_resolved_location,
-                "rag_extra_context": rag_extra_context,
-                "retry_tool_call": retry_tool_call,
-                "retry_tool_response": retry_tool_response,
-                "retry_success": retry_success,
-                "retry_error": retry_error,
+                "recovery_attempted": recovery_attempted,
+                "recovery_tool_call": recovery_tool_call,
+                "recovery_tool_response": recovery_tool_response,
+                "recovery_success": recovery_success,
+                "recovery_error": recovery_error,
                 "final_success": final_success,
             }
             results.append(record)
@@ -377,25 +334,23 @@ async def run_evaluation(args: argparse.Namespace) -> int:
 
         # Print brief summary
         initial_succeeded = sum(1 for r in results if r["success"])
-        retries_attempted = sum(1 for r in results if r.get("rag_used"))
-        recovered = sum(1 for r in results if r.get("retry_success"))
+        recoveries_attempted = sum(1 for r in results if r.get("recovery_attempted"))
+        recovered = sum(1 for r in results if r.get("recovery_attempted") and r.get("recovery_success"))
         final_succeeded = sum(1 for r in results if r.get("final_success", r["success"]))
         failed_final = total - final_succeeded
         print("=" * 60)
-        print(f"✅ Completed. Initial success: {initial_succeeded}, Recovered by RAG: {recovered}/{retries_attempted}, Final success: {final_succeeded}, Final failures: {failed_final}. Results → {args.output}")
+        print(f"✅ Completed. Initial success: {initial_succeeded}, Recovered: {recovered}/{recoveries_attempted}, Final success: {final_succeeded}, Final failures: {failed_final}. Results → {args.output}")
         return 0
     finally:
         await evaluator.cleanup()
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="Evaluate Google Maps MCP tool-calling with RAG fallback across a set of queries.")
+    p = argparse.ArgumentParser(description="Evaluate Google Maps MCP tool-calling across a set of queries.")
     p.add_argument("--queries-file", type=str, default=None, help="Path to a text file with one query per line.")
     p.add_argument("--query", action="append", help="Specify a single query (can be repeated).")
-    p.add_argument("--output", type=str, default="maps_eval_results_rag.jsonl", help="Output JSONL file path.")
+    p.add_argument("--output", type=str, default="maps_eval_results.jsonl", help="Output JSONL file path.")
     p.add_argument("--stream", action="store_true", help="Write each record to output as it completes instead of batching.")
-    p.add_argument("--rag-dir", type=str, default=os.getenv("RAG_DOCS_DIR", "PDFs"), help="Directory to scan for RAG docs.")
-    p.add_argument("--rag-file", action="append", default=[], help="Specific RAG file path (repeatable).")
     return p
 
 

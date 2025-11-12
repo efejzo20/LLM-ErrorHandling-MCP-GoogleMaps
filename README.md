@@ -24,6 +24,27 @@ This project evaluates how well different LLMs can:
 
 ```
 .
+├── src/                             # Main source code
+│   ├── evaluators/                  # Batch evaluation scripts
+│   │   ├── maps_evaluator.py        # Basic evaluator (no recovery)
+│   │   ├── maps_evaluator_error.py  # Error recovery with LLM
+│   │   ├── maps_evaluator_rag.py    # RAG fallback for events
+│   │   └── maps_evaluator_hybrid.py # 🌟 Hybrid (RAG + Error recovery)
+│   │
+│   ├── judges/                      # Result evaluation
+│   │   ├── maps_llm_judge.py        # General tool-calling judge
+│   │   └── maps_hybrid_judge.py     # RAG-aware judge with ground truth
+│   │
+│   ├── agents/                      # Interactive agents
+│   │   ├── maps_direct_flow.py      # Interactive single-query agent
+│   │   └──  maps_direct_flow_rag.py  # Interactive agent with RAG
+│   │
+│   └── utils/                       # Helper modules
+│       ├── error_recovery.py        # LLM-based error correction
+│       ├── rag_location_resolver.py # RAG location extraction
+│       ├── rag_demo.py              # RAG testing demo
+│       └── maps_dataset_generator.py # Generate test queries
+│
 ├── Dataset/                         # Organized test queries
 │   ├── MCP-GoogleMaps/              # Google Maps evaluation queries
 │   │   ├── maps_queries.txt         # Main query set
@@ -42,25 +63,9 @@ This project evaluates how well different LLMs can:
 ├── Data-Sumary/                     # Processed summaries and statistics
 ├── results_rag/                     # RAG-specific results
 │
-├── Core Evaluators (Batch Testing)
-├── maps_evaluator.py                # Basic evaluator (no recovery)
-├── maps_evaluator_error.py          # Error recovery with LLM
-├── maps_evaluator_rag.py            # RAG fallback for events
-├── maps_evaluator_hybrid.py         # 🌟 Hybrid (RAG + Error recovery)
-│
-├── Direct Flow Agents (Interactive)
-├── maps_direct_flow.py              # Interactive single-query agent
-├── maps_direct_flow_rag.py          # Interactive agent with RAG
-│
-├── Judges (Result Evaluation)
-├── maps_llm_judge.py                # General tool-calling judge
-├── maps_hybrid_judge.py             # RAG-aware judge with ground truth
-│
-├── Helper Modules
-├── error_recovery.py                # LLM-based error correction
-├── rag_location_resolver.py         # RAG location extraction
-├── rag_demo.py                      # RAG testing demo
-└── maps_dataset_generator.py        # Generate test queries
+├── README.md
+├── requirements.txt
+└── uv.lock
 ```
 
 ## Getting Started
@@ -118,7 +123,7 @@ npx -y @modelcontextprotocol/server-google-maps
 Create a diverse set of test queries for evaluation:
 
 ```bash
-python maps_dataset_generator.py \
+python -m src.utils.maps_dataset_generator \
   --num 200 \
   --output Dataset/MCP-GoogleMaps/my_queries.txt \
   --format txt
@@ -133,7 +138,7 @@ python maps_dataset_generator.py \
 The most sophisticated evaluator with intelligent routing between RAG and error recovery:
 
 ```bash
-python maps_evaluator_hybrid.py \
+python -m src.evaluators.maps_evaluator_hybrid \
   --queries-file Dataset/MCP-GoogleMaps/maps_queries.txt \
   --output results_hybrid.jsonl \
   --rag-dir PDFs
@@ -159,7 +164,7 @@ python maps_evaluator_hybrid.py \
 For queries specifically involving event locations:
 
 ```bash
-python maps_evaluator_rag.py \
+python -m src.evaluators.maps_evaluator_rag \
   --queries-file Dataset/RAG-Location/rag_queries.txt \
   --output results_rag.jsonl \
   --rag-dir PDFs
@@ -170,7 +175,7 @@ python maps_evaluator_rag.py \
 For general parameter/API error testing:
 
 ```bash
-python maps_evaluator_error.py \
+python -m src.evaluators.maps_evaluator_error \
   --queries-file Dataset/MCP-GoogleMaps/maps_queries.txt \
   --output results_error.jsonl
 ```
@@ -180,7 +185,7 @@ python maps_evaluator_error.py \
 Baseline without any recovery (to measure improvement):
 
 ```bash
-python maps_evaluator.py \
+python -m src.evaluators.maps_evaluator \
   --queries-file Dataset/MCP-GoogleMaps/maps_queries.txt \
   --output results_basic.jsonl
 ```
@@ -192,7 +197,7 @@ python maps_evaluator.py \
 #### **Hybrid Judge** (for RAG evaluation with ground truth)
 
 ```bash
-python maps_hybrid_judge.py \
+python -m src.judges.maps_hybrid_judge \
   --input results_hybrid.jsonl \
   --expected-locations Dataset/RAG-Location/rag_expected_locations.csv \
   --output judged_hybrid.jsonl \
@@ -215,7 +220,7 @@ python maps_hybrid_judge.py \
 #### **General Judge** (for tool selection evaluation)
 
 ```bash
-python maps_llm_judge.py \
+python -m src.judges.maps_llm_judge \
   --input results_hybrid.jsonl \
   --output judged_general.jsonl \
   --summary general_summary.json
@@ -234,13 +239,13 @@ Test individual queries interactively with the direct flow agents:
 
 #### **Basic Direct Flow**
 ```bash
-python maps_direct_flow.py
+python -m src.agents.maps_direct_flow
 # Then enter queries interactively
 ```
 
 #### **RAG-Enhanced Direct Flow**
 ```bash
-python maps_direct_flow_rag.py --rag-dir PDFs
+python -m src.agents.maps_direct_flow_rag --rag-dir PDFs
 # Test event queries with RAG fallback
 ```
 
@@ -251,7 +256,7 @@ python maps_direct_flow_rag.py --rag-dir PDFs
 Test RAG independently:
 
 ```bash
-python rag_demo.py \
+python -m src.utils.rag_demo \
   --query "Where is the TUM Robotics Expo?" \
   --dir PDFs \
   --top-k 6
@@ -377,16 +382,16 @@ The hybrid evaluator intelligently routes errors:
 
 ```bash
 # 1. Generate diverse test queries
-python maps_dataset_generator.py --num 200 --output Dataset/MCP-GoogleMaps/queries_200.txt
+python -m src.utils.maps_dataset_generator --num 200 --output Dataset/MCP-GoogleMaps/queries_200.txt
 
 # 2. Run hybrid evaluation
-python maps_evaluator_hybrid.py \
+python -m src.evaluators.maps_evaluator_hybrid \
   --queries-file Dataset/MCP-GoogleMaps/queries_200.txt \
   --output results.jsonl \
   --rag-dir PDFs
 
 # 3. Judge results with ground truth
-python maps_hybrid_judge.py \
+python -m src.judges.maps_hybrid_judge \
   --input results.jsonl \
   --expected-locations Dataset/RAG-Location/rag_expected_locations.csv \
   --output judged.jsonl \

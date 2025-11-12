@@ -20,7 +20,7 @@ try:
 except ImportError:
     pass
 
-from rag_location_resolver import RAGLocationResolver
+from src.utils.rag_location_resolver import RAGLocationResolver
 
 
 class GoogleMapsFlowAgentRAG:

@@ -27,8 +27,8 @@ try:
 except ImportError:
     pass
 
-from rag_location_resolver import RAGLocationResolver
-from error_recovery import ToolCallRecovery
+from src.utils.rag_location_resolver import RAGLocationResolver
+from src.utils.error_recovery import ToolCallRecovery
 
 
 class GoogleMapsHybridEvaluator:
